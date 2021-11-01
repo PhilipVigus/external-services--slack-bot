@@ -1,13 +1,13 @@
 {
-  "name": "eslint-prettier",
+  "name": "services-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "A slack bot that returns the status of various external services such as GitHub and Trello",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Phil Vigus",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.32.0",
