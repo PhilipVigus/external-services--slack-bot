@@ -8,8 +8,12 @@ const app = new App({
     appToken: process.env.SLACK_APP_TOKEN,
 });
 
-app.message("hello", async ({ message, say }) => {
-    await say(`Hey there <@${message.user}>!`);
+app.command("/service", async ({ command, ack, say }) => {
+    await ack();
+
+    console.log(command);
+
+    await say("Blah");
 });
 
 (async () => {
