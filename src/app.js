@@ -1,5 +1,6 @@
 require("dotenv").config();
 const { App } = require("@slack/bolt");
+const service = require("./commands/service");
 
 const app = new App({
     token: process.env.SLACK_BOT_TOKEN,
@@ -8,13 +9,8 @@ const app = new App({
     appToken: process.env.SLACK_APP_TOKEN,
 });
 
-app.command("/service", async ({ command, ack, say }) => {
-    await ack();
-
-    console.log(command);
-
-    await say("Blah");
-});
+service.initialise();
+service.register(app);
 
 (async () => {
     // Start your app
