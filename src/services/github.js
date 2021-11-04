@@ -1,10 +1,12 @@
 const axios = require("axios").default;
 
+const URL = "https://www.githubstatus.com/api/v2/status.json";
+
 const getStatus = async () => {
     let status;
 
     await axios
-        .get("https://www.githubstatus.com/api/v2/status.json")
+        .get(URL)
         .then((response) => {
             status = `Github incident status: ${response.data.status.description}`;
         })
@@ -15,7 +17,7 @@ const getStatus = async () => {
     return status;
 };
 
-exports = {};
-exports.getStatus = getStatus;
-
-module.exports = { getStatus };
+module.exports = {
+    getStatus,
+    url: URL,
+};

@@ -8,10 +8,7 @@ describe("Github service", () => {
     it("Returns the status of the Github service", async () => {
         const testData = require("../fixtures/github/status.json");
 
-        mock.onGet("https://www.githubstatus.com/api/v2/status.json").reply(
-            200,
-            testData
-        );
+        mock.onGet(github.url).reply(200, testData);
 
         const test = await github.getStatus();
 

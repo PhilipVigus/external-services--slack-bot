@@ -9,12 +9,12 @@ const app = new App({
     appToken: process.env.SLACK_APP_TOKEN,
 });
 
-service.initialise();
-service.register(app);
-
 (async () => {
     // Start your app
     await app.start(process.env.PORT || 3000);
+
+    service.initialise();
+    service.register(app);
 
     console.log("⚡️ Bolt app is running!");
 })();

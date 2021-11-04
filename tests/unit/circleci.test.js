@@ -8,10 +8,7 @@ describe("Circle CI service", () => {
     it("Returns the status of the Circle CI service", async () => {
         const testData = require("../fixtures/circleci/status.json");
 
-        mock.onGet("https://status.circleci.com/api/v2/status.json").reply(
-            200,
-            testData
-        );
+        mock.onGet(circleCi.url).reply(200, testData);
 
         const test = await circleCi.getStatus();
 
