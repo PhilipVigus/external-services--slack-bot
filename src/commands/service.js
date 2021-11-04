@@ -14,6 +14,16 @@ const register = (app) => {
     app.command("/service", async ({ command, ack, say }) => {
         await ack();
 
+        if (command.text === "") {
+            await say("You must provide a service name");
+            return;
+        }
+
+        if (!(command.text in services)) {
+            await say("Unrecognised service name");
+            return;
+        }
+
         const status = await services[command.text].getStatus();
 
         const response = `${services[command.text].title} - ${status}`;
