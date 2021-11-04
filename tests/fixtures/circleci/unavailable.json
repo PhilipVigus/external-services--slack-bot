@@ -1,0 +1,13 @@
+{
+    "page": {
+        "id": "6w4r0ttlx5ft",
+        "name": "CircleCI",
+        "url": "https://status.circleci.com",
+        "time_zone": "Etc/UTC",
+        "updated_at": "2021-11-03T18:19:04.731Z"
+    },
+    "status": {
+        "indicator": "major",
+        "description": "Partial System Outage"
+    }
+}

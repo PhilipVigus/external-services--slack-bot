@@ -1,0 +1,13 @@
+{
+    "page": {
+        "id": "h5frqhb041yq",
+        "name": "Trello",
+        "url": "https://trello.status.atlassian.com",
+        "time_zone": "America/New_York",
+        "updated_at": "2021-11-04T04:23:57.029-04:00"
+    },
+    "status": {
+        "indicator": "major",
+        "description": "Partial Systems Outage"
+    }
+}

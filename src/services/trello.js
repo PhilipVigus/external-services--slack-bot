@@ -1,5 +1,7 @@
 const axios = require("axios").default;
+const statuses = require("./statuses");
 
+const TITLE = "Trello";
 const URL = "https://trello.status.atlassian.com/api/v2/status.json";
 
 const getStatus = async () => {
@@ -8,10 +10,13 @@ const getStatus = async () => {
     await axios
         .get(URL)
         .then((response) => {
-            status = `Trello incident status: ${response.data.status.description}`;
+            status =
+                response.data.status.indicator === "none"
+                    ? statuses.AVAILABLE
+                    : statuses.UNAVAILABLE;
         })
-        .catch((error) => {
-            status = `Error - ${error}`;
+        .catch(() => {
+            status = statuses.ERROR;
         });
 
     return status;
@@ -20,4 +25,5 @@ const getStatus = async () => {
 module.exports = {
     getStatus,
     url: URL,
+    title: TITLE,
 };

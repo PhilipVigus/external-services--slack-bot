@@ -1,17 +1,38 @@
 const axios = require("axios");
 const MockAdapter = require("axios-mock-adapter");
 const circleCi = require("../../src/services/circleci");
+const statuses = require("../../src/services/statuses");
 
 const mock = new MockAdapter(axios);
 
 describe("Circle CI service", () => {
-    it("Returns the status of the Circle CI service", async () => {
-        const testData = require("../fixtures/circleci/status.json");
+    it("Returns the available status if the service is available", async () => {
+        const testData = require("../fixtures/circleci/available.json");
 
         mock.onGet(circleCi.url).reply(200, testData);
 
-        const test = await circleCi.getStatus();
+        const status = await circleCi.getStatus();
 
-        expect(test).toBe("Circle CI incident status: All Systems Operational");
+        expect(status).toBe(statuses.AVAILABLE);
+    });
+
+    it("Returns the unavailable status if the service is unavailable", async () => {
+        const testData = require("../fixtures/circleci/unavailable.json");
+
+        mock.onGet(circleCi.url).reply(200, testData);
+
+        const status = await circleCi.getStatus();
+
+        expect(status).toBe(statuses.UNAVAILABLE);
+    });
+
+    it("Returns the error status if the status was not returned", async () => {
+        const testData = require("../fixtures/circleci/unavailable.json");
+
+        mock.onGet(circleCi.url).reply(500, testData);
+
+        const status = await circleCi.getStatus();
+
+        expect(status).toBe(statuses.ERROR);
     });
 });

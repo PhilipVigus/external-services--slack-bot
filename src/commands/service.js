@@ -1,4 +1,5 @@
 const glob = require("glob");
+const statuses = require("../services/statuses");
 
 const services = {};
 
@@ -15,7 +16,9 @@ const register = (app) => {
 
         const status = await services[command.text].getStatus();
 
-        await say(status);
+        const response = `${services[command.text].title} - ${status}`;
+
+        await say(response);
     });
 };
 
