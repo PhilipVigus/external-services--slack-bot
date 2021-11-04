@@ -4,7 +4,7 @@ const getStatus = async () => {
     let status;
 
     await axios
-        .get("https://www.githubstatus.com/api/v2/summary.json")
+        .get("https://www.githubstatus.com/api/v2/status.json")
         .then((response) => {
             status = `Github incident status: ${response.data.status.description}`;
         })

@@ -4,7 +4,7 @@ const getStatus = async () => {
     let status;
 
     await axios
-        .get("https://status.circleci.com/api/v2/summary.json")
+        .get("https://status.circleci.com/api/v2/status.json")
         .then((response) => {
             status = `Circle CI incident status: ${response.data.status.description}`;
         })
