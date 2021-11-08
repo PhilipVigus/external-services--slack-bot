@@ -3,6 +3,7 @@ const statuses = require("./statuses");
 
 const TITLE = "Trello";
 const URL = "https://trello.status.atlassian.com/api/v2/status.json";
+const STATUS_PAGE = "https://trello.status.atlassian.com/";
 
 const getStatus = async () => {
     let status;
@@ -26,4 +27,5 @@ module.exports = {
     getStatus,
     url: URL,
     title: TITLE,
+    statusPage: STATUS_PAGE,
 };

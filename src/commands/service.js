@@ -24,11 +24,26 @@ const register = (app) => {
             return;
         }
 
-        const status = await services[command.text].getStatus();
+        const service = services[command.text];
 
-        const response = `${services[command.text].title} - ${status}`;
+        const status = await service.getStatus();
 
-        await say(response);
+        const markdownResponse = `${service.title} - <${service.statusPage}|${status}>`;
+
+        const plainResponse = `${service.title} - ${status}`;
+
+        await say({
+            blocks: [
+                {
+                    type: "section",
+                    text: {
+                        type: "mrkdwn",
+                        text: markdownResponse,
+                    },
+                },
+            ],
+            text: plainResponse,
+        });
     });
 };
 

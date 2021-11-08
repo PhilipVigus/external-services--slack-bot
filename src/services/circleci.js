@@ -3,6 +3,7 @@ const statuses = require("./statuses");
 
 const TITLE = "Circle CI";
 const URL = "https://status.circleci.com/api/v2/status.json";
+const STATUS_PAGE = "https://status.circleci.com/";
 
 const getStatus = async () => {
     let status;
@@ -26,4 +27,5 @@ module.exports = {
     getStatus,
     url: URL,
     title: TITLE,
+    statusPage: STATUS_PAGE,
 };
