@@ -1,5 +1,5 @@
 const axios = require("axios").default;
-const statuses = require("./statuses");
+const statuses = require("./support/statuses");
 
 const TITLE = "Trello";
 const URL = "https://trello.status.atlassian.com/api/v2/status.json";

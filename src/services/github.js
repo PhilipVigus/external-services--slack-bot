@@ -1,5 +1,5 @@
 const axios = require("axios").default;
-const statuses = require("./statuses");
+const statuses = require("./support/statuses");
 
 const TITLE = "Github";
 const URL = "https://www.githubstatus.com/api/v2/status.json";

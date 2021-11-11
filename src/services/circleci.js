@@ -1,5 +1,5 @@
 const axios = require("axios").default;
-const statuses = require("./statuses");
+const statuses = require("./support/statuses");
 
 const TITLE = "Circle CI";
 const URL = "https://status.circleci.com/api/v2/status.json";

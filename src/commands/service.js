@@ -1,5 +1,4 @@
 const glob = require("glob");
-const statuses = require("../services/statuses");
 
 const services = {};
 
@@ -19,8 +18,45 @@ const register = (app) => {
             return;
         }
 
-        if (!(command.text in services)) {
+        if (!(command.text in services) && command.text !== "all") {
             await say("Unrecognised service name");
+            return;
+        }
+
+        if (command.text === "all") {
+            const serviceStatuses = await Promise.all(
+                Object.keys(services).map(async (serviceName) => {
+                    const service = services[serviceName];
+                    const status = await service.getStatus();
+
+                    return {
+                        markdownResponse: `${service.title} - <${service.statusPage}|${status}>`,
+                        plainResponse: `${service.title} - ${status}`,
+                    };
+                })
+            );
+
+            const plainResponse = serviceStatuses
+                .map((serviceStatus) => serviceStatus.plainResponse)
+                .join("\n");
+
+            const markdownResponse = serviceStatuses
+                .map((serviceStatus) => serviceStatus.markdownResponse)
+                .join("\n");
+
+            await say({
+                blocks: [
+                    {
+                        type: "section",
+                        text: {
+                            type: "mrkdwn",
+                            text: markdownResponse,
+                        },
+                    },
+                ],
+                text: plainResponse,
+            });
+
             return;
         }
 
