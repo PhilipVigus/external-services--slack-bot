@@ -2,7 +2,9 @@ const axios = require("axios").default;
 const statuses = require("./support/statuses");
 
 const TITLE = "Google";
-const URL = "https://www.google.com/appsstatus/dashboard/incidents.json";
+const SERVICE_ENDPOINT =
+    "https://www.google.com/appsstatus/dashboard/incidents.json";
+
 const STATUS_PAGE = "https://www.google.com/appsstatus/dashboard/";
 const HEALTHY_STATUS_INDICATOR = "AVAILABLE";
 
@@ -33,7 +35,7 @@ const getStatus = async () => {
     let status;
 
     await axios
-        .get(URL)
+        .get(SERVICE_ENDPOINT)
         .then((response) => {
             status = summariseStatusFromIncidents(response.data);
         })
