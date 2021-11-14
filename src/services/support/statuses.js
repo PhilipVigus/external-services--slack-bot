@@ -1,6 +1,6 @@
 const STATUSES = {
-    AVAILABLE: "Available",
-    UNAVAILABLE: "Unavailable",
+    HEALTHY: "Healthy",
+    UNHEALTHY: "Unhealthy",
     ERROR: "Error",
 };
 

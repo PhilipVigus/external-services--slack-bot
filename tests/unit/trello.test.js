@@ -6,28 +6,28 @@ const statuses = require("../../src/services/support/statuses");
 const mock = new MockAdapter(axios);
 
 describe("Trello service", () => {
-    it("Returns the available status if the service is available", async () => {
-        const testData = require("../fixtures/trello/available.json");
+    it("Returns the healthy status if the service is healthy", async () => {
+        const testData = require("../fixtures/trello/healthy.json");
 
         mock.onGet(trello.url).reply(200, testData);
 
         const status = await trello.getStatus();
 
-        expect(status).toBe(statuses.AVAILABLE);
+        expect(status).toBe(statuses.HEALTHY);
     });
 
-    it("Returns the unavailable status if the service is unavailable", async () => {
-        const testData = require("../fixtures/trello/unavailable.json");
+    it("Returns the unhealthy status if the service is unhealthy", async () => {
+        const testData = require("../fixtures/trello/unhealthy.json");
 
         mock.onGet(trello.url).reply(200, testData);
 
         const status = await trello.getStatus();
 
-        expect(status).toBe(statuses.UNAVAILABLE);
+        expect(status).toBe(statuses.UNHEALTHY);
     });
 
-    it("Returns the error status if the status was not returned", async () => {
-        const testData = require("../fixtures/trello/unavailable.json");
+    it("Returns the error status if there was an error fetching the status", async () => {
+        const testData = require("../fixtures/trello/healthy.json");
 
         mock.onGet(trello.url).reply(500, testData);
 

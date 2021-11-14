@@ -20,15 +20,15 @@ const summariseStatusFromIncidents = (incidents) => {
             incident.most_recent_update.status !== "AVAILABLE" &&
             SUB_SERVICES.includes(incident.service_name)
         ) {
-            return statuses.UNAVAILABLE;
+            return statuses.UNHEALTHY;
         }
     }
 
-    return statuses.AVAILABLE;
+    return statuses.HEALTHY;
 };
 
 const getStatus = async () => {
-    let status = statuses.AVAILABLE;
+    let status = statuses.HEALTHY;
 
     await axios
         .get(URL)

@@ -13,8 +13,8 @@ const getStatus = async () => {
         .then((response) => {
             status =
                 response.data.status.indicator === "none"
-                    ? statuses.AVAILABLE
-                    : statuses.UNAVAILABLE;
+                    ? statuses.HEALTHY
+                    : statuses.UNHEALTHY;
         })
         .catch(() => {
             status = statuses.ERROR;

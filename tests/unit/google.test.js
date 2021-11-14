@@ -6,38 +6,38 @@ const statuses = require("../../src/services/support/statuses");
 const mock = new MockAdapter(axios);
 
 describe("Google service", () => {
-    it("Returns the available status if all subservices available", async () => {
-        const testData = require("../fixtures/google/available.json");
+    it("Returns the healthy status if all subservices are healthy", async () => {
+        const testData = require("../fixtures/google/all-healthy.json");
 
         mock.onGet(google.url).reply(200, testData);
 
         const status = await google.getStatus();
 
-        expect(status).toBe(statuses.AVAILABLE);
+        expect(status).toBe(statuses.HEALTHY);
     });
 
-    it("Returns the available status if all subservices you are interested in are available", async () => {
-        const testData = require("../fixtures/google/interestedAvailable.json");
+    it("Returns the healthy status if all subservices you are interested in are healthy", async () => {
+        const testData = require("../fixtures/google/all-interested-healthy.json");
 
         mock.onGet(google.url).reply(200, testData);
 
         const status = await google.getStatus();
 
-        expect(status).toBe(statuses.AVAILABLE);
+        expect(status).toBe(statuses.HEALTHY);
     });
 
-    it("Returns the unavailable status if one of the services you are interested in is unavailable", async () => {
-        const testData = require("../fixtures/google/unavailable.json");
+    it("Returns the unhealthy status if one of the services you are interested in is unhealthy", async () => {
+        const testData = require("../fixtures/google/interested-unhealthy.json");
 
         mock.onGet(google.url).reply(200, testData);
 
         const status = await google.getStatus();
 
-        expect(status).toBe(statuses.UNAVAILABLE);
+        expect(status).toBe(statuses.UNHEALTHY);
     });
 
-    it("Returns the error status if the status was not returned", async () => {
-        const testData = require("../fixtures/google/unavailable.json");
+    it("Returns the error status if there was an error fetching the status", async () => {
+        const testData = require("../fixtures/google/all-healthy.json");
 
         mock.onGet(google.url).reply(500, testData);
 
