@@ -4,7 +4,9 @@ const statuses = require("./support/statuses");
 const TITLE = "Google";
 const URL = "https://www.google.com/appsstatus/dashboard/incidents.json";
 const STATUS_PAGE = "https://www.google.com/appsstatus/dashboard/";
-const SUB_SERVICES = [
+const HEALTHY_STATUS_INDICATOR = "AVAILABLE";
+
+const INTERESTING_SUB_SERVICES = [
     "Gmail",
     "Google Meet",
     "Google Calendar",
@@ -17,8 +19,8 @@ const SUB_SERVICES = [
 const summariseStatusFromIncidents = (incidents) => {
     for (const incident of incidents) {
         if (
-            incident.most_recent_update.status !== "AVAILABLE" &&
-            SUB_SERVICES.includes(incident.service_name)
+            incident.most_recent_update.status !== HEALTHY_STATUS_INDICATOR &&
+            INTERESTING_SUB_SERVICES.includes(incident.service_name)
         ) {
             return statuses.UNHEALTHY;
         }
@@ -28,7 +30,7 @@ const summariseStatusFromIncidents = (incidents) => {
 };
 
 const getStatus = async () => {
-    let status = statuses.HEALTHY;
+    let status;
 
     await axios
         .get(URL)
@@ -44,7 +46,6 @@ const getStatus = async () => {
 
 module.exports = {
     getStatus,
-    url: URL,
     title: TITLE,
     statusPage: STATUS_PAGE,
 };

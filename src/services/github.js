@@ -25,7 +25,6 @@ const getStatus = async () => {
 
 module.exports = {
     getStatus,
-    url: URL,
     title: TITLE,
     statusPage: STATUS_PAGE,
 };
