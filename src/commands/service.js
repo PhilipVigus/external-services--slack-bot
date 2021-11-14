@@ -56,7 +56,7 @@ const formatStatuses = (serviceStatuses) => {
 };
 
 const register = (app) => {
-    app.command("/service", async ({ ack, say }) => {
+    app.command("/external-services", async ({ ack, say }) => {
         await ack();
 
         const serviceStatuses = await fetchAllServiceStatuses();
