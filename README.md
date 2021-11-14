@@ -61,7 +61,7 @@ I am particularly happy with the way I've designed the individual services. It m
 
 ## Adding additional services
 
-To extend the bot to check additional services, create a file from the template file in the docs folder:
+To extend the bot to check additional services, create a file from the template file in the docs folder and add it to the services folder:
 
 ```javascript
 // The title is printed as part of the message in Slack
