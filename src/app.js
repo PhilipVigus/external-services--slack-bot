@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { App } = require("@slack/bolt");
-const externalServices = require("./commands/external-services");
+const externalServicesCommand = require("./commands/externalServicesCommand");
 
 const app = new App({
     token: process.env.SLACK_BOT_TOKEN,
@@ -12,6 +12,6 @@ const app = new App({
 (async () => {
     await app.start(process.env.PORT || 3000);
 
-    externalServices.initialise();
-    externalServices.register(app);
+    externalServicesCommand.initialise();
+    externalServicesCommand.register(app);
 })();
