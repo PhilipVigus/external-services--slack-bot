@@ -37,9 +37,13 @@ const formatStatuses = (serviceStatuses) => {
         };
     });
 
-    const plain = responses.map((response) => response.text).join("\n");
+    const responsesAsText = responses
+        .map((response) => response.text)
+        .join("\n");
 
-    const markdown = responses.map((response) => response.markdown).join("\n");
+    const responsesAsMarkdown = responses
+        .map((response) => response.markdown)
+        .join("\n");
 
     return {
         blocks: [
@@ -47,11 +51,11 @@ const formatStatuses = (serviceStatuses) => {
                 type: "section",
                 text: {
                     type: "mrkdwn",
-                    text: markdown,
+                    text: responsesAsMarkdown,
                 },
             },
         ],
-        text: plain,
+        text: responsesAsText,
     };
 };
 
