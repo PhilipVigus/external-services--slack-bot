@@ -1,4 +1,4 @@
-# Readme
+# External services slack bot
 
 ![External services bot screenshot](/docs/main-screenshot.png "External services bot screenshot")
 
