@@ -1,12 +1,13 @@
 {
-  "name": "services-bot",
+  "name": "external-services-bot",
   "version": "1.0.0",
   "description": "A slack bot that returns the status of various external services such as GitHub and Trello",
   "main": "./src/app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node ./src/app.js"
   },
-  "keywords": [],
+  "keywords": ["slack", "bot", "javascript"],
   "author": "Phil Vigus",
   "license": "ISC",
   "devDependencies": {
