@@ -61,7 +61,7 @@ I am particularly happy with the way I've designed the individual services. It m
 
 ## Adding additional services
 
-To extend the bot with additional services that are checked, create a file from the template file in the docs folder:
+To extend the bot to check additional services, create a file from the template file in the docs folder:
 
 ```javascript
 // The title is printed as part of the message in Slack
@@ -86,3 +86,4 @@ The existing services show specific examples of how they are defined.
 ## Additions and improvements
 
 -   Allow the bot to automatically check external service statuses at regular intervals, and send warning messages to a specified channel if any of the services are unhealthy
+-   Allow the user to retrieve more detailed information on a specific service
