@@ -1,0 +1,109 @@
+[
+  {
+    "id": "Xgi1ng8sjcXHbdApnqRj",
+    "number": "10949113563286226104",
+    "begin": "2021-11-12T08:30:00+00:00",
+    "created": "2021-11-12T09:36:17+00:00",
+    "end": "2021-11-12T10:14:00+00:00",
+    "modified": "2021-11-13T01:06:10+00:00",
+    "external_desc": "We're investigating reports of an issue with Google Chat. We will provide more information shortly.",
+    "updates": [
+      {
+        "created": "2021-11-13T01:05:22+00:00",
+        "modified": "2021-11-13T01:05:22+00:00",
+        "when": "2021-11-13T01:05:22+00:00",
+        "text": "We apologize for the inconvenience this service disruption/outage may have caused. We would like to provide some information about this incident below. Please note, this information is based on our best knowledge at the time of posting and is subject to change as our investigation continues. If you have experienced impact outside of what is listed below, please reach out to Google Support by opening a case using https://cloud.google.com/support.\n(All Times US/Pacific)\n**Incident Start:** 12 November 2021 00:30\n**Incident End:** 12 November 2021 02:14\n**Duration:** 1 hour 44 minutes\n**Affected Services and Features:**\n* Google Gmail\n* Google Groups\n* Google Calendar and Tasks\n* Google Chat\n**Regions/Zones:** Europe\n**Description:**\nGoogle’s Front End load balancing service experienced failures resulting in impact to several downstream Google Cloud services in Europe. From preliminary analysis, the root cause of the issue was caused by a new infrastructure feature triggering a latent issue within internal network load balancer code.\n**Customer Impact:**\n* Google Groups - Affected customers in Europe were unable to access web and mobile clients.\n* Google Calendar and Tasks - Affected customers in Europe were unable to access web mobile clients.\n* Google Chat - Affected customers in Europe were unable to access web and mobile clients.\n* Google Gmail - Affected customers in Europe were unable to access web and mobile clients.\n**Additional details:**\nThe error was caught within 4 minutes by automated safety systems, and further spread was slowed at this point. The issue was fully mitigated approximately 1hr 44m later, when our engineering team completed a rollout to disable the vulnerable code path. The issue will be fully prevented going forward via a root cause fix, which will complete rollout by 12 November 2021 21:00 US/Pacific.",
+        "status": "AVAILABLE"
+      },
+      {
+        "created": "2021-11-12T11:01:52+00:00",
+        "modified": "2021-11-12T11:01:52+00:00",
+        "when": "2021-11-12T11:01:52+00:00",
+        "text": "The problem with Google Chat has been resolved. We apologize for the inconvenience and thank you for your patience and continued support.",
+        "status": "AVAILABLE"
+      },
+      {
+        "created": "2021-11-12T10:40:10+00:00",
+        "modified": "2021-11-12T10:40:10+00:00",
+        "when": "2021-11-12T10:40:10+00:00",
+        "text": "Our team is continuing to investigate this issue. We will provide an update by Nov 12, 2021, 11:00 AM UTC with more information about this problem. Thank you for your patience. The affected users are unable to access Google Chat.\nSome users in Europe may be experiencing issues when attempting to access services.",
+        "status": "SERVICE_DISRUPTION"
+      },
+      {
+        "created": "2021-11-12T09:36:18+00:00",
+        "modified": "2021-11-12T09:36:18+00:00",
+        "when": "2021-11-12T09:36:18+00:00",
+        "text": "We're investigating reports of an issue with Google Chat. We will provide more information shortly.",
+        "status": "SERVICE_DISRUPTION"
+      }
+    ],
+    "most_recent_update": {
+      "created": "2021-11-13T01:05:22+00:00",
+      "modified": "2021-11-13T01:05:22+00:00",
+      "when": "2021-11-13T01:05:22+00:00",
+      "text": "We apologize for the inconvenience this service disruption/outage may have caused. We would like to provide some information about this incident below. Please note, this information is based on our best knowledge at the time of posting and is subject to change as our investigation continues. If you have experienced impact outside of what is listed below, please reach out to Google Support by opening a case using https://cloud.google.com/support.\n(All Times US/Pacific)\n**Incident Start:** 12 November 2021 00:30\n**Incident End:** 12 November 2021 02:14\n**Duration:** 1 hour 44 minutes\n**Affected Services and Features:**\n* Google Gmail\n* Google Groups\n* Google Calendar and Tasks\n* Google Chat\n**Regions/Zones:** Europe\n**Description:**\nGoogle’s Front End load balancing service experienced failures resulting in impact to several downstream Google Cloud services in Europe. From preliminary analysis, the root cause of the issue was caused by a new infrastructure feature triggering a latent issue within internal network load balancer code.\n**Customer Impact:**\n* Google Groups - Affected customers in Europe were unable to access web and mobile clients.\n* Google Calendar and Tasks - Affected customers in Europe were unable to access web mobile clients.\n* Google Chat - Affected customers in Europe were unable to access web and mobile clients.\n* Google Gmail - Affected customers in Europe were unable to access web and mobile clients.\n**Additional details:**\nThe error was caught within 4 minutes by automated safety systems, and further spread was slowed at this point. The issue was fully mitigated approximately 1hr 44m later, when our engineering team completed a rollout to disable the vulnerable code path. The issue will be fully prevented going forward via a root cause fix, which will complete rollout by 12 November 2021 21:00 US/Pacific.",
+      "status": "AVAILABLE"
+    },
+    "status_impact": "SERVICE_DISRUPTION",
+    "severity": "medium",
+    "service_key": "Ht9Vx5PFzDPHYvrnrvSk",
+    "service_name": "Google Chat",
+    "affected_products": [
+      {
+        "title": "Google Chat",
+        "id": "Ht9Vx5PFzDPHYvrnrvSk"
+      }
+    ],
+    "uri": "incidents/Xgi1ng8sjcXHbdApnqRj"
+  },
+  {
+    "id": "J1LHdFtHE9TELWx4e4wv",
+    "number": "10066177398256094915",
+    "begin": "2021-11-12T08:30:00+00:00",
+    "created": "2021-11-12T09:48:04+00:00",
+    "end": "2021-11-12T10:14:00+00:00",
+    "modified": "2021-11-13T01:04:41+00:00",
+    "external_desc": "We're investigating reports of an issue with Google Meet. We will provide more information shortly. The affected users are unable to access Google Meet.",
+    "updates": [
+      {
+        "created": "2021-11-13T01:03:18+00:00",
+        "modified": "2021-11-13T01:03:18+00:00",
+        "when": "2021-11-13T01:03:18+00:00",
+        "text": "We apologize for the inconvenience this service disruption/outage may have caused. We would like to provide some information about this incident below. Please note, this information is based on our best knowledge at the time of posting and is subject to change as our investigation continues. If you have experienced impact outside of what is listed below, please reach out to Google Support by opening a case using https://cloud.google.com/support.\n(All Times US/Pacific)\n**Incident Start:** 12 November 2021 00:30\n**Incident End:** 12 November 2021 02:14\n**Duration:** 1 hour 44 minutes\n**Affected Services and Features:**\n* Google Gmail\n* Google Groups\n* Google Calendar and Tasks\n* Google Chat\n**Regions/Zones:** Europe\n**Description:**\nGoogle’s Front End load balancing service experienced failures resulting in impact to several downstream Google Cloud services in Europe. From preliminary analysis, the root cause of the issue was caused by a new infrastructure feature triggering a latent issue within internal network load balancer code.\n**Customer Impact:**\n* Google Groups - Affected customers in Europe were unable to access web and mobile clients.\n* Google Calendar and Tasks - Affected customers in Europe were unable to access web mobile clients.\n* Google Chat - Affected customers in Europe were unable to access web and mobile clients.\n* Google Gmail - Affected customers in Europe were unable to access web and mobile clients.\n**Additional details:**\nThe error was caught within 4 minutes by automated safety systems, and further spread was slowed at this point. The issue was fully mitigated approximately 1hr 44m later, when our engineering team completed a rollout to disable the vulnerable code path. The issue will be fully prevented going forward via a root cause fix, which will complete rollout by 12 November 2021 21:00 US/Pacific.",
+        "status": "AVAILABLE"
+      },
+      {
+        "created": "2021-11-12T11:04:42+00:00",
+        "modified": "2021-11-12T11:04:42+00:00",
+        "when": "2021-11-12T11:04:42+00:00",
+        "text": "The problem with Google Meet has been resolved. We apologize for the inconvenience and thank you for your patience and continued support.",
+        "status": "AVAILABLE"
+      },
+      {
+        "created": "2021-11-12T09:48:05+00:00",
+        "modified": "2021-11-12T13:11:46+00:00",
+        "when": "2021-11-12T09:48:05+00:00",
+        "text": "We're investigating reports of an issue with Google Meet. We will provide more information shortly. The affected users are unable to access Google Meet.\nWe are investigating an issue which is affecting some users in Europe affecting their ability to access some services.",
+        "status": "SERVICE_DISRUPTION"
+      }
+    ],
+    "most_recent_update": {
+      "created": "2021-11-13T01:03:18+00:00",
+      "modified": "2021-11-13T01:03:18+00:00",
+      "when": "2021-11-13T01:03:18+00:00",
+      "text": "We apologize for the inconvenience this service disruption/outage may have caused. We would like to provide some information about this incident below. Please note, this information is based on our best knowledge at the time of posting and is subject to change as our investigation continues. If you have experienced impact outside of what is listed below, please reach out to Google Support by opening a case using https://cloud.google.com/support.\n(All Times US/Pacific)\n**Incident Start:** 12 November 2021 00:30\n**Incident End:** 12 November 2021 02:14\n**Duration:** 1 hour 44 minutes\n**Affected Services and Features:**\n* Google Gmail\n* Google Groups\n* Google Calendar and Tasks\n* Google Chat\n**Regions/Zones:** Europe\n**Description:**\nGoogle’s Front End load balancing service experienced failures resulting in impact to several downstream Google Cloud services in Europe. From preliminary analysis, the root cause of the issue was caused by a new infrastructure feature triggering a latent issue within internal network load balancer code.\n**Customer Impact:**\n* Google Groups - Affected customers in Europe were unable to access web and mobile clients.\n* Google Calendar and Tasks - Affected customers in Europe were unable to access web mobile clients.\n* Google Chat - Affected customers in Europe were unable to access web and mobile clients.\n* Google Gmail - Affected customers in Europe were unable to access web and mobile clients.\n**Additional details:**\nThe error was caught within 4 minutes by automated safety systems, and further spread was slowed at this point. The issue was fully mitigated approximately 1hr 44m later, when our engineering team completed a rollout to disable the vulnerable code path. The issue will be fully prevented going forward via a root cause fix, which will complete rollout by 12 November 2021 21:00 US/Pacific.",
+      "status": "AVAILABLE"
+    },
+    "status_impact": "SERVICE_DISRUPTION",
+    "severity": "medium",
+    "service_key": "sUH4BQXzYXma7NiS94Hi",
+    "service_name": "Google Slides",
+    "affected_products": [
+      {
+        "title": "Google Slides",
+        "id": "sUH4BQXzYXma7NiS94Hi"
+      }
+    ],
+    "uri": "incidents/J1LHdFtHE9TELWx4e4wv"
+  }
+]
