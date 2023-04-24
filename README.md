@@ -4,7 +4,7 @@
 
 ## Introduction
 
-The external services slack bot was built to solve problem we were having at work. We rely on a number of services including Circle CI, Github and various Google applications. When our were breaking, it wasn't necessarily clear whether it was an issue with our code/infrastructure or because of issues with one of the external services we rely on.
+The external services slack bot was built to solve problem we were having at work. We rely on a number of services including Circle CI, Github and various Google applications. When things were breaking, it wasn't necessarily clear whether it was an issue with our code/infrastructure or because of issues with one of the external services we rely on.
 
 The external services slack bot exposes a slack command that quickly summarises the health of the services we use.
 
